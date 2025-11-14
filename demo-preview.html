@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeJobSearch - Project Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1b4b 0%, #7c2d92 50%, #be185d 100%);
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .demo-card {
+            min-height: 400px;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <!-- Header -->
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20"></div>
+        <div class="relative max-w-6xl mx-auto px-6 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-6xl font-bold text-white mb-4 gradient-text">
+                    VibeJobSearch
+                </h1>
+                <p class="text-xl text-white/70 mb-8">
+                    AI-powered job search with voice input and intelligent matching
+                </p>
+                <div class="flex justify-center space-x-4 text-sm text-white/60">
+                    <span class="px-3 py-1 glassmorphism rounded-full">🎤 Voice Input</span>
+                    <span class="px-3 py-1 glassmorphism rounded-full">🤖 AI Subagents</span>
+                    <span class="px-3 py-1 glassmorphism rounded-full">💼 Smart Matching</span>
+                    <span class="px-3 py-1 glassmorphism rounded-full">✨ Modern UI</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Key Features -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">🚀 Project Implementation</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glassmorphism rounded-2xl p-6 feature-card">
+                    <div class="text-4xl mb-4">🎤</div>
+                    <h3 class="text-lg font-semibold mb-2">Voice Input</h3>
+                    <p class="text-white/70 text-sm">Web Speech API integration with real-time transcription</p>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6 feature-card">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-lg font-semibold mb-2">AI Subagents</h3>
+                    <p class="text-white/70 text-sm">4 specialized agents for intelligent job matching</p>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6 feature-card">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-lg font-semibold mb-2">10 Job Listings</h3>
+                    <p class="text-white/70 text-sm">Realistic tech jobs with full details</p>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6 feature-card">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-lg font-semibold mb-2">Modern UI</h3>
+                    <p class="text-white/70 text-sm">Glassmorphism design with smooth animations</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Structure -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">📁 Project Structure</h2>
+            <div class="glassmorphism rounded-2xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-300">Core Components</h3>
+                        <ul class="space-y-2 text-white/80">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span><code>VoiceInput.tsx</code> - Voice recognition</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span><code>JobCards.tsx</code> - Job display UI</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span><code>JobSearchInterface.tsx</code> - Main interface</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span><code>aiSubagentSystem.ts</code> - AI logic</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-300">Data & Types</h3>
+                        <ul class="space-y-2 text-white/80">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span><code>jobListings.ts</code> - 10 realistic jobs</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span><code>types/index.ts</code> - TypeScript interfaces</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span><code>useVoiceRecognition.ts</code> - Voice hook</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Subagent System -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">🧠 AI Subagent Architecture</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-300">🧠 Keyword Analysis Agent</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Extracts technical skills from queries</li>
+                        <li>• Determines experience level</li>
+                        <li>• Identifies job type preferences</li>
+                    </ul>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-300">🎯 Job Matching Agent</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Scores jobs by multiple criteria</li>
+                        <li>• Ranks results by relevance</li>
+                        <li>• Provides match reasoning</li>
+                    </ul>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-300">💰 Salary Analysis Agent</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Analyzes salary ranges</li>
+                        <li>• Filters by expectations</li>
+                        <li>• Provides market insights</li>
+                    </ul>
+                </div>
+                
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-300">📍 Location Optimizer Agent</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Analyzes location distribution</li>
+                        <li>• Optimizes for remote work</li>
+                        <li>• Provides geographic insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Listings Sample -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">💼 Sample Job Listings</h2>
+            <div class="glassmorphism rounded-2xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-purple-400 pl-4">
+                            <h4 class="font-semibold text-white">Senior Full Stack Developer</h4>
+                            <p class="text-purple-300">TechFlow Solutions • Remote • $140-180k</p>
+                            <p class="text-white/60 text-sm">React, Node.js, TypeScript, AWS</p>
+                        </div>
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <h4 class="font-semibold text-white">Machine Learning Engineer</h4>
+                            <p class="text-blue-300">AI Innovations Inc. • NYC • $160-220k</p>
+                            <p class="text-white/60 text-sm">Python, TensorFlow, PyTorch, MLOps</p>
+                        </div>
+                        <div class="border-l-4 border-green-400 pl-4">
+                            <h4 class="font-semibold text-white">DevOps Engineer</h4>
+                            <p class="text-green-300">CloudScale Systems • Remote • $130-170k</p>
+                            <p class="text-white/60 text-sm">Kubernetes, Docker, AWS, Terraform</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-pink-400 pl-4">
+                            <h4 class="font-semibold text-white">Data Scientist</h4>
+                            <p class="text-pink-300">DataDriven Analytics • Remote • $120-165k</p>
+                            <p class="text-white/60 text-sm">Python, R, SQL, Machine Learning</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-400 pl-4">
+                            <h4 class="font-semibold text-white">UI/UX Designer & Developer</h4>
+                            <p class="text-yellow-300">DesignTech Studio • Portland • $105-140k</p>
+                            <p class="text-white/60 text-sm">Figma, React, User Research</p>
+                        </div>
+                        <div class="border-l-4 border-cyan-400 pl-4">
+                            <h4 class="font-semibold text-white">Junior Software Developer</h4>
+                            <p class="text-cyan-300">GrowthPath Tech • Remote • $70-90k</p>
+                            <p class="text-white/60 text-sm">JavaScript, Python, Mentorship</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <p class="text-white/60">+ 4 more detailed job listings with full descriptions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">⚡ Technology Stack</h2>
+            <div class="glassmorphism rounded-2xl p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-2xl mb-2">⚛️</div>
+                        <h4 class="font-semibold">Next.js 14</h4>
+                        <p class="text-white/60 text-sm">React Framework</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl mb-2">🎨</div>
+                        <h4 class="font-semibold">Tailwind CSS</h4>
+                        <p class="text-white/60 text-sm">Utility Styling</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl mb-2">🎭</div>
+                        <h4 class="font-semibold">Framer Motion</h4>
+                        <p class="text-white/60 text-sm">Animations</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl mb-2">🔤</div>
+                        <h4 class="font-semibold">TypeScript</h4>
+                        <p class="text-white/60 text-sm">Type Safety</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Demo -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">✨ Key Features</h2>
+            <div class="space-y-6">
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-300">🎤 Voice Search Experience</h3>
+                    <div class="bg-black/20 rounded-xl p-4 font-mono text-sm">
+                        <div class="text-green-400">$ Say: "Senior React Developer in San Francisco"</div>
+                        <div class="text-white/70">🧠 Keyword Analysis: [React, Senior, San Francisco]</div>
+                        <div class="text-white/70">🎯 Job Matching: Found 3 relevant positions</div>
+                        <div class="text-white/70">💰 Salary Analysis: Average $150k in SF</div>
+                        <div class="text-white/70">📍 Location: 2 remote, 1 on-site options</div>
+                        <div class="text-blue-400 pulse">✅ Results ready!</div>
+                    </div>
+                </div>
+
+                <div class="glassmorphism rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-green-300">💼 Smart Job Cards</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+                            <h4 class="font-semibold mb-2">Smooth Navigation</h4>
+                            <p class="text-white/60 text-sm">Keyboard shortcuts, pagination dots, smooth animations</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+                            <h4 class="font-semibold mb-2">Complete Details</h4>
+                            <p class="text-white/60 text-sm">Full descriptions, requirements, benefits, deadlines</p>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+                            <h4 class="font-semibold mb-2">Interactive UI</h4>
+                            <p class="text-white/60 text-sm">Apply buttons, save functionality, responsive design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center glassmorphism rounded-2xl p-8">
+            <h2 class="text-3xl font-bold mb-4 gradient-text">Ready to Experience VibeJobSearch?</h2>
+            <p class="text-white/70 mb-6 max-w-2xl mx-auto">
+                This demo showcases the complete implementation with voice input, AI subagents, 
+                and modern job card UI. The project includes 10 realistic job listings and 
+                a fully functional search system.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold">
+                    🎤 Voice-First Design
+                </div>
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold">
+                    🤖 AI-Powered Matching
+                </div>
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-xl font-semibold">
+                    ✨ Modern Interface
+                </div>
+            </div>
+
+            <div class="mt-8 text-white/60">
+                <p class="text-sm">Built with Next.js 14 • TypeScript • Tailwind CSS • Framer Motion</p>
+                <p class="text-xs mt-2">Run <code class="bg-black/20 px-2 py-1 rounded">npm run dev</code> to start the development server</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center py-8 text-white/40">
+        <p>VibeJobSearch - Where voice meets opportunity! 🎤✨</p>
+    </div>
+
+</body>
+</html>
